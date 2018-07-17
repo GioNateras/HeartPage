@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edg>
+	<title>Corazón</title>
+	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<style type="text/css" media="screen">
+	body
+	{
+		font-family: Lato;
+		color: white;
+		font-size:3.7em;
+		background-color: pink; 
+	}
+	.heart
+	{
+		width: 50px;
+		height: 50px;
+		transform: rotate(45deg);
+		background: red;
+		position: relative;
+		top:  10rem;
+		left: 10rem;
+	}
+	.heart:before,
+	.heart:after
+	{
+		content: "";
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background: red;
+		position: absolute;
+	}
+	.heart:before
+	{
+		top: 0;
+		left: -25px;
+	}
+	.heart:after
+	{
+		top: -25px;
+	}
+	.heart
+	{
+		width: 50px;
+		height: 50px;
+		transform: rotate(45deg);
+		background: red;
+		position: relative;
+		top: 10rem;
+		left: 10rem;
+		animation: beating 2s ease infinite;
+	}
+	#tit
+	{
+		text-align: center;
+	}
+	@keyframes beating{
+		0%
+		{
+			transform: rotate(45deg)scale(1);
+		}
+		50%
+		{
+			transform: rotate(45deg)scale(2);
+		}
+		100%
+		{
+			transform: rotate(45deg)scale(1);
+		}
+	</style>
+</head>
+<body>
+	<h1 id="tit">Te dedico este corazón</h1>
+	<div class="heart"></div>
+</body>
+</html>
